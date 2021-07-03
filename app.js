@@ -8,4 +8,6 @@ app.use('/home',home);
 app.use('/admin',admin);
 
 app.listen(80);
-console.log("服务器启动成功")
+console.log("服务器启动成功");
+
+console.log('检查分支')
