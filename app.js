@@ -1,6 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
+//开发静态资源
+app.use(express.static(path.join(__dirname,'public')));
+
+//路由
 const home = require('./route/home');
 const admin = require('./route/admin');
 
