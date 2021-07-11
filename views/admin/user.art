@@ -1,0 +1,15 @@
+{{extend './common/layout.art'}}
+
+{{block 'main'}}
+{{include './common/header.art'}}
+<div class="content">
+    {{include './common/aside.art'}}
+    <div class="main">
+        <div class="title">
+            <h4>用户{{msg ? msg : '用户名不存在'}}</h4>
+            <span>找到1个用户</span>
+            <a href="#" class="btn btn-primary new">新增用户</a>
+        </div>
+    </div>
+</div>
+{{/block}}
