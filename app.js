@@ -1,8 +1,13 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 const app = express();
 require('./model/connect');
 //require('./model/user');
+
+app.use(bodyParser.urlencoded({extended:false}));
+
+//设置模板
 app.set('views',path.join(__dirname,'views'));
 
 app.set('view engine','art');

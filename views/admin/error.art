@@ -1,0 +1,18 @@
+{{extend './common/layout.art'}}
+{{block 'link'}}
+    <style type="text/css">
+        .error{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            height: 58px;
+            line-height: 58px;
+        }
+    </style>
+{{/block}}
+{{block 'main'}}
+    <p class="bg-danger error">{{msg}}</p>
+{{/block}}

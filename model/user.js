@@ -1,5 +1,6 @@
 //创建用户集合
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     username:{
@@ -30,16 +31,18 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User',userSchema);
 
-/*User.create({
-    username:'nodeStudent',
-    email:'zhangsan@163.com',
-    password:'123465',
-    role:'admin',
-    state:0
-}).then(()=>{
-    console.log('用户创建成功');
-}).catch(()=>{
-    console.log('用户创建失败');
-})*/
+async function createUser(){
+    const salt = await bcrypt.genSalt(10);
+    const pass = await bcrypt.hash('123456',salt);
+    const user = await User.create({
+        username:'nodeVIPStudent',
+        email:'lisi@163.com',
+        password:pass,
+        role:'admin',
+        state:0
+    })
+}
+
+//createUser();
 
 module.exports = {User};
