@@ -9,9 +9,11 @@
     {{block 'link'}}{{/block}}
 </head>
 <body>
-    {{block 'main'}}{{/block}}
-    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
-    {{block 'script'}}{{/block}}
+    <div class="root">
+        {{block 'main'}}{{/block}}
+        <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        {{block 'script'}}{{/block}}
+    </div>
 </body>
 </html>

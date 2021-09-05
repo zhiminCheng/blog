@@ -68,6 +68,12 @@ textarea {
 	width: 1100px;
 	margin: 0 auto;
 }
+.root{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
 
 /* 头部框架开始 */
 .header {
@@ -77,6 +83,8 @@ textarea {
 	/*background: #3f434c;*/
 	background: #fff;
 	position: relative;
+	display: flex;
+	justify-content: space-between;
 }
 
 .header .w1100 {
@@ -100,17 +108,79 @@ textarea {
 	line-height: 60px;
 	font-size: 18px;
 	color: #fff;
+	width: 250px;
 }
 .info {
-	position: absolute;
-	top: 0px;
-	right: 0px;
 	height: 60px;
 	padding: 11px;
 }
 /* 网站logo结束 */
 
 /* 网站导航开始 */
+.content{
+	display: flex;
+	flex: 1;
+	min-width: 1100px;
+}
+
+.content .aside.fl{
+	width: 250px;
+	background-color: blue;
+	background-color: #151F2D;
+}
+
+.aside .menu{
+	padding: 32px 0px;
+ }
+
+.aside .menu li{
+	padding: 16px;
+}
+
+.menu li a{
+	color: #fff;
+}
+
+.aside .cprt{
+	position: fixed;
+	bottom: 0px;
+	color: #fff;
+	text-align: center;
+	width: 250px;
+}
+
+.aside .cprt a{
+	color: #337ab7;
+}
+
+.content .main{
+	background-color: #F7FAF9;
+	flex: 1;
+}
+
+.content .main .title{
+	display: flex;
+	justify-content: space-between;
+	padding: 11px;
+}
+
+.title .userName h4{
+	color: #3D362E;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.title .userName span{
+	color: #ADAFBC;
+	font-size: 15px;
+	display: block;
+	margin-top: 8px;
+}
+
+.title .btn.btn-primary.new{
+	height: 35px;
+}
+
 .navigation {
 	height: 60px;
 }

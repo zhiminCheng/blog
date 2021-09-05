@@ -1,6 +1,6 @@
 <div class="aside fl">
     <ul class="menu list-unstyled">
-        <li>
+        <li class="bi bi-house">
             <a class="item active" href="user.html">
                 <span class="glyphicon glyphicon-user"></span>
                 用户管理
