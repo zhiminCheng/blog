@@ -6,10 +6,42 @@
     {{include './common/aside.art'}}
     <div class="main">
         <div class="title">
-            <h4>用户{{msg ? msg : '用户名不存在'}}</h4>
-            <span>找到1个用户</span>
+            <div class="userName">
+                <h4>用户{{msg ? msg : '用户名不存在'}}</h4>
+                <span>找到1个用户</span>
+            </div>
             <a href="#" class="btn btn-primary new">新增用户</a>
         </div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 {{/block}}
